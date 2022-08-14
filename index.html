@@ -25,6 +25,7 @@
             margin: 5px;
         }
     </style>
+    <script src="https://cdn.jsdelivr.net/combine/npm/tone@14.7.58,npm/@magenta/music@1.23.1/es6/core.js,npm/focus-visible@5,npm/html-midi-player@1.4.0"></script>
 </head>
 
 <body bgcolor="#000000" background="site/bg_stars.gif" text="#ff0000" link="#ff4c4c" vlink="#ff4c4c" alink="#ff4c4c">
@@ -50,7 +51,12 @@
         <hr>
 
         <h2>Chanson préférée?</h2>
-        <audio src="site/darkness.midi" controls preload="auto"></audio>
+        <midi-player
+            src="/site/darkness.midi"
+            sound-font visualizer="#myVisualizer">
+        </midi-player>
+        <midi-visualizer type="piano-roll" id="myVisualizer"></midi-visualizer>
+        <br>
 
         <hr>
 
